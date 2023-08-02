@@ -18,6 +18,7 @@ pipeline {
 	}
         stage('23Q1') {
             steps {
+		sh "rm -rf /var/www/html/*"
                 sh "cp -r /mnt/multibranch/jenkins-multibranch/index.html /var/www/html/"
 				sh "chmod -R 777 /var/www/html/index.html"
             }
