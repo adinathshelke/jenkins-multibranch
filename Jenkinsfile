@@ -6,6 +6,11 @@ pipeline {
 	}
 	}
     stages {
+	    stage ("clean workspace") {
+               steps {
+		cleanWs()
+	       }       
+	       }
 	stage ("git clone"){
 	 steps {
 	 sh "git clone https://github.com/adinathshelke/jenkins-multibranch.git"
