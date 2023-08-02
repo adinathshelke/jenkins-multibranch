@@ -6,11 +6,6 @@ pipeline {
 	}
 	}
     stages {
-	stage ("git clone"){
-	 steps {
-	 sh "git clone https://github.com/adinathshelke/jenkins-multibranch.git"
-	 }
-	}
         stage('main') {
             steps {
                 sh "cp -r /mnt/multibranch/jenkins-multibranch/index.html /var/www/html/"
