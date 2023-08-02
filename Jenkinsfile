@@ -6,11 +6,17 @@ pipeline {
 	}
 	}
     stages {
+	    
 	    stage ("clean workspace") {
                steps {
 		cleanWs()
 	       }       
 	       }
+	    stage ('git clone') {
+		    steps {
+	    sh "git clone https://github.com/adinathshelke/jenkins-multibranch.git"
+		    }
+		    }
         stage('23Q1') {
             steps {
 		sh "rm -rf /var/www/html/*"
