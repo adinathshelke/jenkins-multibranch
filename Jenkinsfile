@@ -14,7 +14,7 @@ pipeline {
 	       }
 	    stage ('git clone') {
 		    steps {
-	    sh "git clone https://github.com/adinathshelke/jenkins-multibranch.git"
+	    sh "git clone https://github.com/adinathshelke/jenkins-multibranch.git -b 23Q1"
 		    }
 		    }
         stage('23Q1') {
